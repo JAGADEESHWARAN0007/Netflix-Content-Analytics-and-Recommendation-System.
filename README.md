@@ -2,134 +2,315 @@
 
 ## Project Overview
 
-This project analyzes Netflix's content library and develops a recommendation system using Machine Learning techniques. The project combines Data Analytics, Business Intelligence, and Recommendation Systems to generate insights and personalized content suggestions.
+This project analyzes Netflix's content library using Data Analytics, Business Intelligence, and Machine Learning techniques. The goal is to uncover content trends, identify business insights, and build a recommendation system that suggests similar movies and TV shows based on user preferences.
+
+The project combines Python, Power BI, Streamlit, and Machine Learning to demonstrate the complete data analytics workflow from data cleaning to interactive dashboard development and recommendation generation.
+
+---
+
+## Problem Statement
+
+Netflix hosts thousands of movies and TV shows across multiple countries, genres, and categories. As the content library grows, users face difficulties discovering relevant content, while business teams need insights to support content acquisition and investment decisions.
+
+This project addresses these challenges through:
+
+* Exploratory Data Analysis (EDA)
+* Business Intelligence Dashboards
+* Content-Based Recommendation System
+* Interactive Streamlit Application
+
+---
 
 ## Objectives
 
-* Analyze Netflix content trends
-* Identify genre and country-wise content distribution
-* Build an interactive Power BI dashboard
-* Develop a content-based recommendation system using TF-IDF and Cosine Similarity
-* Create a Streamlit web application for user recommendations
+* Clean and preprocess Netflix dataset
+* Perform exploratory data analysis
+* Identify key content trends and business insights
+* Build interactive Power BI dashboards
+* Develop a movie recommendation system using TF-IDF and Cosine Similarity
+* Create a user-friendly Streamlit application
+
+---
 
 ## Dataset
 
-Netflix Movies and TV Shows Dataset
+Dataset Source:
 
-Total Records: 8,790+
+Netflix Movies and TV Shows Dataset (Kaggle)
 
-Features:
+Features include:
 
 * Title
-* Type
-* Genre
-* Country
-* Rating
-* Release Year
-* Description
+* Type (Movie / TV Show)
 * Director
 * Cast
+* Country
+* Date Added
+* Release Year
+* Rating
+* Duration
+* Genre
+* Description
 
-## Technologies Used
+---
+
+## Technology Stack
+
+### Programming Language
 
 * Python
+
+### Data Analysis
+
 * Pandas
 * NumPy
+
+### Visualization
+
 * Matplotlib
 * Seaborn
+
+### Machine Learning
+
 * Scikit-Learn
-* Streamlit
+* TF-IDF Vectorization
+* Cosine Similarity
+
+### Business Intelligence
+
 * Power BI
 
-## Key Insights
+### Web Application
+
+* Streamlit
+
+---
+
+## Project Workflow
+
+1. Data Understanding
+2. Data Cleaning and Preprocessing
+3. Exploratory Data Analysis
+4. Feature Engineering
+5. Power BI Dashboard Development
+6. Recommendation System Development
+7. Streamlit Application Deployment
+
+---
+
+## Key Business Insights
 
 ### Movies vs TV Shows
 
 * Movies: 6,126
 * TV Shows: 2,664
 
+Insight:
+Movies account for approximately 70% of Netflix content.
+
+Recommendation:
+Continue expanding successful TV show investments while maintaining a strong movie catalog.
+
+---
+
 ### Top Content Producing Countries
 
-* United States
-* India
-* United Kingdom
+Top Contributors:
 
-### Popular Genres
+1. United States
+2. India
+3. United Kingdom
+
+Insight:
+The United States dominates Netflix's content production.
+
+Recommendation:
+Increase investments in emerging markets such as India, South Korea, and Japan.
+
+---
+
+### Genre Analysis
+
+Top Genres:
 
 * International Movies
 * Dramas
 * Comedies
 
-### Content Growth
+Insight:
+Netflix strongly focuses on international and drama-based content.
 
-* Peak content addition observed in 2019
+Recommendation:
+Expand region-specific content to attract global audiences.
 
-## Machine Learning Recommendation System
+---
 
-### Content-Based Recommendation
+### Content Growth Analysis
 
-Built using:
+Insight:
+Netflix experienced rapid content growth between 2016 and 2019, peaking in 2019.
 
-* TF-IDF Vectorization
-* Cosine Similarity
+Recommendation:
+Focus on content quality while maintaining strategic expansion.
+
+---
+
+## Power BI Dashboard Features
+
+The dashboard includes:
+
+* Total Titles KPI
+* Movies KPI
+* TV Shows KPI
+* Movies vs TV Shows Analysis
+* Top Content Producing Countries
+* Top Netflix Genres
+* Content Rating Distribution
+* Content Added Over Time
+* Interactive Country Filter
+* Interactive Content Type Filter
+
+---
+
+## Recommendation System
+
+### Approach
+
+The recommendation system uses:
+
+* Genre Information
+* Description
+* Director
+* Cast
+
+These features are combined and transformed using TF-IDF Vectorization.
+
+Cosine Similarity is then used to identify similar content.
+
+### Recommendation Methods
+
+#### 1. Title-Based Recommendation
 
 Example:
 
 Input:
 Stranger Things
 
-Recommendations:
+Output:
 
-* Nightflyers
-* Helix
 * The OA
 * Manifest
 * Warrior Nun
+* The Umbrella Academy
+* Nightflyers
 
-### Preference-Based Recommendation
+#### 2. Preference-Based Recommendation
 
-Users can filter content by:
+Users can select:
 
+* Content Type
 * Genre
-* Type
 * Rating
-* Country
 * Release Year
 
-## Power BI Dashboard
+The system then recommends matching content.
+
+---
+
+## Streamlit Application
 
 Features:
 
-* KPI Cards
-* Genre Analysis
-* Country Analysis
-* Content Growth Analysis
-* Interactive Filters
+* Modern User Interface
+* Title-Based Recommendations
+* Preference-Based Recommendations
+* Interactive Search
+* Real-Time Results
+
+Run locally:
+
+```bash
+streamlit run app.py
+```
+
+---
 
 ## Project Structure
 
-Netflix-Content-Analytics/
-│
-├── dataset/
-├── models/
-├── notebooks/
-├── screenshots/
-├── reports/
-├── dashboard/
+```text
+Netflix-Content-Analytics-and-Recommendation-System
+
+├── dashboard
+│   └── Netflix_Analytics_Dashboard.pbix
+
+├── dataset
+│   ├── netflix_cleaned.csv
+│   ├── netflix_powerbi.csv
+│   └── netflix_with_tags.csv
+
+├── notebooks
+│   ├── 01_Data_Understanding.ipynb
+│   ├── 02_Data_Cleaning.ipynb
+│   ├── 03_EDA.ipynb
+│   ├── 04_PowerBI_Preparation.ipynb
+│   └── 05_Movie_Recommendation_System.ipynb
+
+├── reports
+│   └── EDA_Insights.docx
+
+├── screenshots
+
 ├── app.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 └── .gitignore
+```
+
+---
+
+## Screenshots
+
+### Power BI Dashboard
+
+Add dashboard screenshot here.
+
+### Streamlit Home Page
+
+Add homepage screenshot here.
+
+### Title Recommendation
+
+Add recommendation screenshot here.
+
+### Preference-Based Recommendation
+
+Add recommendation screenshot here.
+
+---
 
 ## Future Enhancements
 
-* Poster-based recommendations
-* User authentication
-* Hybrid recommendation engine
-* Cloud deployment
+* Hybrid Recommendation System
+* Collaborative Filtering
+* User Authentication
+* Cloud Deployment
+* Real-Time Recommendation API
+* Sentiment Analysis on Reviews
+
+---
 
 ## Author
 
-JAGADEESHWARAN S
+Jagadeeshwaran S.
+
 B.Tech Information Technology
+
 Kumaraguru College of Technology
+
+Aspiring Data Analyst | Data Science Enthusiast
+
+---
+
+## License
+
+This project is developed for educational and portfolio purposes.
